@@ -1,0 +1,42 @@
+
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+// Variables
+// @import 'variables';
+
+//translates
+@import 'translate';
+
+//Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+// .container {
+//   max-width: 1300px;
+// }
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.feather {
+  width: 18px;
+  height: 18px;
+  // stroke-width: 5;
+  vertical-align: text-bottom;
+}

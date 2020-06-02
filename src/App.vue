@@ -1,32 +1,47 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+<template lang='pug'>
+#app
+  Topbar
+  .d-flex.flex-row-reverse.fixed-bottom.m-3
+    //-a.btn.btn-primary(href='https://www.facebook.com/kramviTeam/' target='_blank')
+      img.mr-2.mt-1(src='@/icons/facebook.svg' align='left' width='15')
+    a.bg-success.rounded-circle(style='padding:.8rem' href='whatsapp://send?phone=+51922537926&text=Hola tengo una consulta' 
+      v-if='isMobile()')
+      img(src='@/icons/whatsapp.svg' align='left' width='40' height='40') 
+    a.bg-success.rounded-circle(style='padding:.8rem' href='https://web.whatsapp.com/send?phone=51922537926&text=Hola tengo una consulta' 
+      v-else target='_blank')
+      img(src='@/icons/whatsapp.svg' align='left' width='40' height='40') 
+  main(style='margin-top: 40px' role='main')
     <router-view/>
-  </div>
+  Footer
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import Topbar from '@/components/Topbar'
+import Footer from '@/components/Footer'
+export default {
+  components: {
+    Topbar,
+    Footer,
+  },
+  methods: {
+    isMobile() { 
+      if ( navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)
+      || navigator.userAgent.match(/iPad/i)
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i)
+      ) {
+        return true;
+      } else {
+        return false;
+      }
     }
   }
 }
+</script>
+
+<style lang="scss">
+@import "@/sass/app.scss";
 </style>
