@@ -4,7 +4,8 @@
     h1.display-4 Precios
     p.lead
       | Elija el plan que mas se acomode a su empresa 
-  .card-deck.mb-3
+  pricings
+  //-.card-deck.mb-3
     .card.mb-4.shadow-sm
       .card-header
         h4.my-0.font-weight-normal.text-center Basico
@@ -39,10 +40,10 @@
         .form-group
           select.custom-select(v-model='quantityBasic')
             option(v-for='n in 5' :value='n') {{ n }} SUCURSAL
-        a.btn.btn-lg.btn-block.btn-outline-primary(href='whatsapp://send?phone=+51922537926&text=Hola quiero contratar Kramvi'
+        a.btn.btn-lg.btn-block.btn-outline-primary(href='whatsapp://send?phone=+51930430929&text=Hola quiero contratar Kramvi'
           v-if='isMobile()') 
           | Contratar 
-        a.btn.btn-lg.btn-block.btn-outline-primary(href='https://web.whatsapp.com/send?phone=51922537926&text=Hola quiero contratar Kramvi' 
+        a.btn.btn-lg.btn-block.btn-outline-primary(href='https://web.whatsapp.com/send?phone=51930430929&text=Hola quiero contratar Kramvi' 
           v-else target='_blank') 
           | Contratar 
     .card.mb-4.shadow-sm
@@ -79,10 +80,10 @@
         .form-group
           select.custom-select(v-model='quantityPro')
             option(v-for='n in 5' :value='n') {{ n }} SUCURSAL
-        a.btn.btn-lg.btn-block.btn-outline-primary(href='whatsapp://send?phone=+51922537926&text=Hola quiero contratar Kramvi'
+        a.btn.btn-lg.btn-block.btn-outline-primary(href='whatsapp://send?phone=+51930430929&text=Hola quiero contratar Kramvi'
           v-if='isMobile()') 
           | Contratar 
-        a.btn.btn-lg.btn-block.btn-outline-primary(href='https://web.whatsapp.com/send?phone=51922537926&text=Hola quiero contratar Kramvi' 
+        a.btn.btn-lg.btn-block.btn-outline-primary(href='https://web.whatsapp.com/send?phone=51930430929&text=Hola quiero contratar Kramvi' 
           v-else target='_blank') 
           | Contratar 
     .card.mb-4.shadow-sm
@@ -119,10 +120,10 @@
         .form-group
           select.custom-select(v-model='quantityEcommerce')
             option(v-for='n in 5' :value='n') {{ n }} SUCURSAL
-        a.btn.btn-lg.btn-block.btn-outline-primary(href='whatsapp://send?phone=+51922537926&text=Hola quiero contratar Kramvi'
+        a.btn.btn-lg.btn-block.btn-outline-primary(href='whatsapp://send?phone=+51930430929&text=Hola quiero contratar Kramvi'
           v-if='isMobile()') 
           | Contratar 
-        a.btn.btn-lg.btn-block.btn-outline-primary(href='https://web.whatsapp.com/send?phone=51922537926&text=Hola quiero contratar Kramvi' 
+        a.btn.btn-lg.btn-block.btn-outline-primary(href='https://web.whatsapp.com/send?phone=51930430929&text=Hola quiero contratar Kramvi' 
           v-else target='_blank') 
           | Contratar 
   .pricing-header.px-3.mx-auto.text-center
@@ -131,7 +132,12 @@
 </template>
 
 <script>
+import Pricings from '@/components/Pricings'
+
 export default {
+  components: {
+    Pricings,
+  },
   data() {
     return {
       discount: 10,
@@ -140,22 +146,6 @@ export default {
       quantityEcommerce: 1,
     }
   },
-  methods: {
-    isMobile() { 
-      if ( navigator.userAgent.match(/Android/i)
-      || navigator.userAgent.match(/webOS/i)
-      || navigator.userAgent.match(/iPhone/i)
-      || navigator.userAgent.match(/iPad/i)
-      || navigator.userAgent.match(/iPod/i)
-      || navigator.userAgent.match(/BlackBerry/i)
-      || navigator.userAgent.match(/Windows Phone/i)
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-  }
 }
 </script>
 

@@ -27,7 +27,7 @@
           p.shadow-text
             | Sistemas a medida para su empresa, pida una cotizacion.
           p
-            a.btn.btn-lg.btn-primary(href='https://web.whatsapp.com/send?phone=51922537926&text=Hola tengo una consulta' target='_blank') 
+            a.btn.btn-lg.btn-primary(href='https://web.whatsapp.com/send?phone=51930430929&text=Hola tengo una consulta' target='_blank') 
               | Cotizar 
     .carousel-item
       img(src='@/assets/banner3.png' style='object-fit: cover')

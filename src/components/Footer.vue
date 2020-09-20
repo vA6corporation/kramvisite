@@ -43,7 +43,7 @@ footer.container.py-5.mt-3
         li
           a.text-muted(href='https://www.youtube.com/channel/UCTTjsJFSwmYiZpN65Pggksw') Youtube
         li
-          a.text-muted(href='#') Cel: +51922537926
+          a.text-muted(href='#') Cel: +51930430929
         //-li
           a.text-muted(href='https://getbootstrap.com/docs/4.4/examples/product/#') Gaming
     .col-6.col-md

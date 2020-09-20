@@ -4,10 +4,10 @@
   .d-flex.flex-row-reverse.fixed-bottom.m-3
     //-a.btn.btn-primary(href='https://www.facebook.com/kramviTeam/' target='_blank')
       img.mr-2.mt-1(src='@/icons/facebook.svg' align='left' width='15')
-    a.bg-success.rounded-circle(style='padding:.8rem' href='whatsapp://send?phone=+51922537926&text=Hola tengo una consulta' 
+    a.bg-success.rounded-circle(style='padding:.8rem' href='whatsapp://send?phone=+51930430929&text=Hola tengo una consulta' 
       v-if='isMobile()')
       img(src='@/icons/whatsapp.svg' align='left' width='40' height='40') 
-    a.bg-success.rounded-circle(style='padding:.8rem' href='https://web.whatsapp.com/send?phone=51922537926&text=Hola tengo una consulta' 
+    a.bg-success.rounded-circle(style='padding:.8rem' href='https://web.whatsapp.com/send?phone=51930430929&text=Hola tengo una consulta' 
       v-else target='_blank')
       img(src='@/icons/whatsapp.svg' align='left' width='40' height='40') 
   main(style='margin-top: 40px' role='main')
